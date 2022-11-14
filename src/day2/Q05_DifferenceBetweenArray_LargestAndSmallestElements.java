@@ -11,5 +11,20 @@ public class Q05_DifferenceBetweenArray_LargestAndSmallestElements {
     kullanıcının girdigi bir array'in en buyuk elemani ile
     en kucuk elemanının  farkını bulan bir method create ediniz.
  */
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Array uzunluk: ");
+        int uzunluk = sc.nextInt();
+        int[] arr = new int[uzunluk];
+        for (int i = 0; i < uzunluk; i++) {
+            System.out.println("Arrayin " + (i + 1) + ". elemanını giriniz : ");
+            arr[i] = sc.nextInt();
 
+        }
+        Arrays.sort(arr);
+        System.out.println(Arrays.toString(arr));
+
+        System.out.println("difference: " + (arr[arr.length - 1] - arr[0]));
+
+    }
 }

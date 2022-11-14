@@ -15,54 +15,43 @@ public class Q01_ArmstrongNumber {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Sayı Girinz:"   );
-int sayi = sc.nextInt();
-armstrong(sayi);
+        System.out.println("Sayı Girinz:");
+        int sayi = sc.nextInt();
+        armstrong(sayi);
 
-girilenSayiyaKadarOlanArmstrong(sayi);
-
-
-
-
+        girilenSayiyaKadarOlanArmstrong(sayi);
 
 
     }
 
     private static void girilenSayiyaKadarOlanArmstrong(int sayi) {
-        for (int i = 0; i <=sayi ; i++) {
+        for (int i = 0; i <= sayi; i++) {
             armstrong(i);
 
         }
 
 
-
-
-
-
     }
 
     private static void armstrong(int sayi) {
-        int sayininKupleriToplami=0;
-        int banamaktakiSayi=0;
-        int girilenSayi=sayi;
+        int sayininKupleriToplami = 0;
+        int banamaktakiSayi = 0;
+        int girilenSayi = sayi;
 
-        while(sayi>0){
-            banamaktakiSayi=sayi%10;
-            sayininKupleriToplami +=(banamaktakiSayi*banamaktakiSayi*banamaktakiSayi);
-            sayi=sayi/10;
-
+        while (sayi > 0) {
+            banamaktakiSayi = sayi % 10;
+            sayininKupleriToplami += (banamaktakiSayi * banamaktakiSayi * banamaktakiSayi);
+            sayi = sayi / 10;
 
 
         }
-        if(girilenSayi==sayininKupleriToplami){
-            System.out.println(girilenSayi+" sayi armstrong sayıdır");
+        if (girilenSayi == sayininKupleriToplami) {
+            System.out.println(girilenSayi + " sayi armstrong sayıdır");
 
-        }else System.out.println(girilenSayi+" sayisi armstrog sayısı değildir ");
-
+        } else System.out.println(girilenSayi + " sayisi armstrog sayısı değildir ");
 
 
     }
-
 
 
 }

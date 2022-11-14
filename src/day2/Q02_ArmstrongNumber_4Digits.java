@@ -12,4 +12,28 @@ public class Q02_ArmstrongNumber_4Digits {
 
         5 basamakli : 54748 */
 
+
+    public static void main(String[] args) {
+
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Sayı Girinz:");
+        String strSayi = sc.next();
+        armstrongMethod(strSayi);
+
+    }
+
+    private static void armstrongMethod(String strSayi) {
+
+        String []basamak =strSayi.split("");
+        int toplam =0;
+        for (int i = 0; i < basamak.length ; i++) {
+            toplam +=Math.pow(Integer.valueOf(basamak[i]), basamak.length);// Math.pow(taban,üs)
+            // String olan herbir basamagı  integer a çevirdik
+            //basamal.lenght -> üs
+        }
+        System.out.println(Integer.valueOf(strSayi) == toplam ? "bu bir armstrong sayıdır" : "bu bir armstrong sayi değildir.");
+
+
+    }
 }
